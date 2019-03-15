@@ -2,6 +2,12 @@
 ##compile
 javac -d out src/com/learn/learn_modules/*.java src/module-info.java
 
+###or for linux
+javac -d out $(find src -name '*.java')
+
+###or for windows
+javac -d out (dir /b /a-d /s *.java)
+
 ##generate jar file
 md lib
 jar --create --file lib/first.jar -C out .
